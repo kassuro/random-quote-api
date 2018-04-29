@@ -1,0 +1,32 @@
+{
+    "name": "random-quote-api",
+    "version": "0.0.1",
+    "description": "simple express based API for return random quotes from a database",
+    "scripts": {
+        "dev": "nodemon",
+        "start": "node ./src/bin/www",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kassuro/random-quote-api.git"
+    },
+    "author": "Luca Fuhl (kassuro)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kassuro/random-quote-api/issues"
+    },
+    "homepage": "https://github.com/kassuro/random-quote-api#readme",
+    "devDependencies": {
+        "nodemon": "^1.17.3",
+        "sqlite3": "^4.0.0"
+    },
+    "dependencies": {
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.6.9",
+        "express": "~4.16.0",
+        "knex": "^0.14.6",
+        "morgan": "~1.9.0",
+        "objection": "^1.1.7"
+    }
+}
