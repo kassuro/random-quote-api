@@ -3,10 +3,14 @@
 module.exports = {
 
     development: {
-        client: 'sqlite3',
+        client: 'mariasql',
         connection: {
-            filename: '../dev-db'
-        }
+            host : '172.17.0.2',
+            user : 'root',
+            password : 'test',
+            db : 'test'
+        },
+        useNullAsDefault: true
     },
 
     staging: {

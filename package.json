@@ -20,14 +20,14 @@
     },
     "homepage": "https://github.com/kassuro/random-quote-api#readme",
     "devDependencies": {
-        "nodemon": "^1.17.3",
-        "sqlite3": "^4.0.0"
+        "nodemon": "^1.17.3"
     },
     "dependencies": {
         "cookie-parser": "~1.4.3",
         "debug": "~2.6.9",
         "express": "~4.16.0",
         "knex": "^0.14.6",
+        "mariasql": "^0.2.6",
         "morgan": "~1.9.0",
         "objection": "^1.1.7"
     }
