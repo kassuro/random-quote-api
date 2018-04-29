@@ -11,6 +11,7 @@ exports.up = knex => {
                 .unsigned()
                 .references('id')
                 .inTable('authors');
+            table.string('text');
         });
 };
 
