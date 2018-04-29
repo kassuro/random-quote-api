@@ -16,6 +16,6 @@ exports.up = knex => {
 
 exports.down = knex => {
     return knex.schema
-        .dropTableIfExits('authors')
-        .dropTableIfExits('quotes');
+        .dropTableIfExists('authors')
+        .dropTableIfExists('quotes');
 };
