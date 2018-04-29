@@ -1,11 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const Quote = require('../models/Quote');
 
-/* GET home page. */
-router.get('/', function (req, res) {
-    res.json({
-        title: 'Express'
-    });
+/*
+*   route '/'
+*   return a random quote
+*/
+router.get('/', async (req, res) => {
+    let quote = await Quote.query().select().orderByRaw('RAND()').limit(1).first();
+    res.json(quote);
 });
 
 module.exports = router;
