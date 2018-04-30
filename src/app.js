@@ -5,6 +5,7 @@ const logger = require('morgan');
 const Knex = require('knex');
 const knexConfig = require('./knexfile');
 const { Model } = require('objection');
+const cors = require('cors');
 
 // init knex config
 const knex = Knex(knexConfig.development);
@@ -18,6 +19,7 @@ const authorsRouter = require('./routes/authors');
 const app = express();
 
 app.use(logger('dev'));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
