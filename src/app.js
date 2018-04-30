@@ -13,6 +13,7 @@ Model.knex(knex);
 
 const indexRouter = require('./routes/index');
 const quotesRouter = require('./routes/quotes');
+const authorsRouter = require('./routes/authors');
 
 const app = express();
 
@@ -24,5 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/quotes', quotesRouter);
+app.use('/authors', authorsRouter);
 
 module.exports = app;

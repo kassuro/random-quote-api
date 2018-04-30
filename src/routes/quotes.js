@@ -7,7 +7,7 @@ const Quote = require('../models/Quote');
 *   return all quotes
 */
 router.get('/', async (req, res) => {
-    let quotes = await Quote.query();
+    let quotes = await Quote.query().eager('author');
     res.json(quotes);
 });
 

@@ -7,7 +7,7 @@ const Quote = require('../models/Quote');
 *   return a random quote
 */
 router.get('/', async (req, res) => {
-    let quote = await Quote.query().select().orderByRaw('RAND()').limit(1).first();
+    let quote = await Quote.query().select().orderByRaw('RAND()').limit(1).first().eager('author');
     res.json(quote);
 });
 
