@@ -12,6 +12,7 @@ const knex = Knex(knexConfig.development);
 Model.knex(knex);
 
 const indexRouter = require('./routes/index');
+const quotesRouter = require('./routes/quotes');
 
 const app = express();
 
@@ -22,5 +23,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/quotes', quotesRouter);
 
 module.exports = app;
