@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/kassuro/random-quote-api/badge)](https://www.codefactor.io/repository/github/kassuro/random-quote-api)
+
 # random-quote-api
 
 This is my take on a random quote api.
